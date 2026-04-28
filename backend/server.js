@@ -3,14 +3,21 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://cuemath-tutor.onrender.com',
+    'https://cuemath-maya-tutor.onrender.com',
+    'https://cuemath-maya-tutor-frontend.onrender.com'
+  ],
+  methods: ['GET', 'POST']
+}));
 app.use(express.json());
 
 // ================== HEALTH CHECK ==================
 app.get('/', (req, res) => {
   res.json({ status: 'Backend Running ✅' });
 });
-
 // ================== ASSESS ENDPOINT ==================
 app.post('/api/assess', async (req, res) => {
   try {

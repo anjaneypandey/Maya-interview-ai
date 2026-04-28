@@ -4,7 +4,8 @@ const VapiClass = VapiSDK.default || VapiSDK;
 
 const VAPI_PUBLIC_KEY = "71120d3a-d3c2-4a2a-8160-01059447b026";
 const ASSISTANT_ID = "2daadcf2-b2f0-47b6-87f3-7cf65186820e";
-const BACKEND = "http://localhost:3001";
+const BACKEND = "https://cuemath-maya-tutor-backend.onrender.com"
+
 
 export default function Interview({ onComplete }) {
   const [status, setStatus] = useState("idle");
