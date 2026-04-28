@@ -3,15 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://cuemath-tutor.onrender.com',
-    'https://cuemath-maya-tutor.onrender.com',
-     'https://maya-interview-ai-frontend.onrender.com'
-  ],
-  methods: ['GET', 'POST']
-}));
+app.use(cors());
 app.use(express.json());
 
 // ================== HEALTH CHECK ==================
