@@ -8,7 +8,7 @@ app.use(cors({
     'http://localhost:5173',
     'https://cuemath-tutor.onrender.com',
     'https://cuemath-maya-tutor.onrender.com',
-    'https://cuemath-maya-tutor-frontend.onrender.com'
+     'https://maya-interview-ai-frontend.onrender.com'
   ],
   methods: ['GET', 'POST']
 }));
